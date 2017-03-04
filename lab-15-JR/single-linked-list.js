@@ -3,9 +3,9 @@
 const Node = require('./node/sll-node');
 
 const SinglyLinkedList = module.exports = function(arr) {
+  this.head = null;
   if(Array.isArray(arr)) arr.forEach(val => this.append(val));
 };
-
 
 SinglyLinkedList.prototype.prepend = function(val) {
   let node = new Node(val);
